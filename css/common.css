@@ -1,0 +1,86 @@
+/* Media Queries */
+
+/* Mobile 크기 */
+@media screen and (min-width: 320px) and (max-width:480px){
+    /* header */
+    #header{border-bottom: 1px solid #fff;}
+    .header_inner {flex-direction: column;}
+    h1.logo {margin-right: 0; margin-top: 20px;}
+    nav.gnb>ul {display: none;}
+    .intro{display: block !important;}
+    .top_menu {display: none;}
+    .btnMenu{display: block;}
+    .btnlocation{display: block;}
+    .btnstore{display: block;}
+
+    /* footer */
+    .foot_inner{margin: 50px;}
+    .foot_top .etc{flex-direction: column;}
+    .foot_top li {margin-right: 0;margin-bottom: 10px; font-size: 15px; line-height: 25px;}
+    .etc li{padding-bottom: 10px; border-bottom: 1px solid #33333327; width: 50vw;}
+    .sns{flex-direction: column; margin-top: -50px;}
+    .sns li{padding-top: 40px;}
+    /* 페밀리사이트 */
+    .family_site{width: 100%; text-align: center;}
+}
+
+/* Tablet 크기 */
+@media screen and (min-width:481px) and (max-width:768px){
+    /* header */
+    #header{border-bottom: 1px solid #fff;}
+    .header_inner {flex-direction: column;}
+    h1.logo {margin-right: 0; margin-top: 20px;}
+    nav.gnb>ul {display: none;}
+    .intro{display: block !important;}
+    .top_menu {display: none;}
+    .btnMenu{display: block;}
+    .btnlocation{display: block;}
+    .btnstore{display: block;}
+
+    /* footer */
+    .foot_inner{margin: 50px;}
+    .foot_top .etc{flex-direction: column;}
+    .foot_top li {margin-right: 0;margin-bottom: 10px; font-size: 15px; line-height: 25px;}
+    .etc li{padding-bottom: 10px; border-bottom: 1px solid #33333327; width: 50vw;}
+    .sns{flex-direction: column; margin-top: -50px;}
+    .sns li{padding-top: 40px;}
+    /* 페밀리사이트 */
+    .family_site{width: 100%; text-align: center;}
+}
+
+/* Laptops 크기*/
+@media screen and (min-width:769px) and (max-width:1023px) {
+    #header{border-bottom: 1px solid #fff;} 
+    .header_inner {flex-direction: column;} 
+    h1.logo {margin-right: 0; margin-top: 20px;} 
+    nav.gnb>ul{display: none;}
+   .top_menu{display: none;}
+    .btnMenu{display: block;}
+   .btnlocation{display: block;}
+   .btnstore{display: block;}
+
+    /* footer */
+    .foot_top {display: grid; width: 90%; justify-content: center;}
+    .sns{margin-top: 25px;}
+    .foot_body{width: 100%; justify-content: center;}
+
+    /* 페밀리사이트 */
+    .family_site{width: 100%; text-align: center;}
+}
+
+
+/* 헤더 겹치는 지점 */
+@media only screen and (min-width: 993px) and (max-width: 1700px){
+    /* header */
+    #header{border-bottom: 1px solid #fff;} 
+    .header_inner {flex-direction: column;} 
+    h1.logo {margin-right: 0; margin-top: 20px;} 
+    nav.gnb>ul {display: none;} 
+    .top_menu {display: none;}
+    .btnMenu{display: block;} 
+    .btnlocation{display: block;}
+    .btnstore{display: block;}
+
+    /* 페밀리사이트 */
+    .family_site{width: 100%; text-align: center;}
+}

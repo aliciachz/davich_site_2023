@@ -1,0 +1,69 @@
+/* header */
+#header.on,#header:hover {background: #fff;}
+#header.on .gnb>ul>li>a,#header:hover .gnb>ul>li>a  {color: #222;}
+#header.on .top_menu>div>a,#header:hover .top_menu>div>a {padding: 5px 15px; border-radius: 20px;}
+#header.on .top_menu>div:nth-of-type(1)>a,#header:hover .top_menu>div:nth-of-type(1)>a{background: #222;}
+#header.on .top_menu>div:nth-of-type(2)>a,#header:hover .top_menu>div:nth-of-type(2)>a{background: #0056AA;}
+#header.on .btnstore img,#header:hover .btnstore img{object-position: -10px;}
+#header.on .btnlocation img,#header:hover .btnlocation img{object-position: -10px;}
+#header.on h1.logo a, #header:hover h1.logo a {background-position: 0 100%;}
+
+
+#header.on label .hamburger,#header:hover label .hamburger{background-color: #000;}
+#header.on label .hamburger:after, #header.on label .hamburger:before,#header:hover label .hamburger:after, #header:hover label .hamburger:before{background-color: #000;}
+label .hamburger:after, label .hamburger:before,label .hamburger:after, label .hamburger:before  {transition: .5s ease-in-out;
+content: "";position: absolute;display: block;width: 100%;
+height: 100%;background: #fff;}
+
+/* 로고 */
+h1.logo {margin-right: 45px;}
+h1.logo>a {display: block; width: 165px; height: 40px; background: url(../img/logo-all.png) no-repeat 99.3% 100%; background-size: cover; text-indent: -9999px; overflow: hidden;}
+
+/* 주 메뉴 */
+nav.gnb>ul {display: flex; height: 80px; align-items: center;} 
+nav.gnb>ul>li>a {flex: 1; display: block; padding: 28px 20px; font-family: 'Public Sans', sans-serif; font-size: 17px; font-weight: 500; line-height: 22px; color: #fff;}
+#header nav.gnb>ul>li:hover>a:after {color: #0056AA;}
+#header nav.gnb>ul>li:hover::after {content: ''; display: block; width: 100%; height: 2px; background: #0056AA; }
+
+/* 서브 메뉴 */
+.sub_menu {display: none; position: absolute; left: 0; width: 100%; border: 1px solid #ddd;}
+li.on>.sub_menu {display: block;}
+.sub_menu>ul {display: flex; justify-content: center; align-items: center;}
+.sub_menu>ul>li {padding: 28px 20px; margin-right: 20px; font-size: 17px; font-weight: 500;}
+.sub_menu >ul>li>a{color: #222;}
+.sub_menu>ul>li:hover>a {color: #0056AA;}
+
+/* 탑 메뉴 */
+.top_menu {display: flex; justify-content: space-between; align-items: center;}
+.top_menu>div a {display: block; padding: 5px 15px; font-size: 14px; color: #fff;}
+.top_menu>div:nth-of-type(1) {margin-right: 10px;}
+.top_menu>div:nth-of-type(2)>a>span {margin-right: 5px; line-height: 14px;} 
+
+/* 햄버거 버튼 */
+.btnMenu{opacity: 1; z-index: 50;position: fixed; left: 30px;top: 20px;font-size: 30px;color: #fff; display: none;} 
+label .menu {position: absolute; right: -150px;top: -115px;z-index: 100;width: 200px;height: 200px; transition: .5s ease-in-out;transition: .5s ease-in-out;cursor: pointer; }
+label .hamburger {position: absolute;top: 135px;left: 50px;width: 30px;height: 2px;background: #fff;display: block;transform-origin: center;transform-origin: center; 
+transition: .5s ease-in-out;}
+label .hamburger:before { top: -10px; }
+label .hamburger:after { bottom: -10px; }
+label input { display: none;  position: relative;}
+label input:checked + .menu {background: #FFF; height: 1000vh;}
+label input:checked + .menu .hamburger {transform: rotate(45deg); transform: rotate(45deg);}
+  
+label input:checked + .menu .hamburger:after {transform: rotate(90deg);transform: rotate(90deg); bottom: 0;}
+label input:checked + .menu .hamburger:before {transform: rotate(90deg); transform: rotate(90deg); top: 0; }
+
+/* 햄버거 sub */
+.sub_mo{display: none;z-index: 100; margin-top: 100px; text-align: left; font-size: 18px; font-weight: 700; font-family: Public Sans,sans-serif; width: 100%; position: absolute; }
+.menu_mo{display: none; font-size: 16px; font-weight: bold;}
+.sub_mo li{ padding: 15px;}
+.sub_mo a{color: #222; border-bottom: 1px solid #dedede;}
+
+/* Topicon */
+.topicon{justify-content: center; align-items: center;position: fixed; display: flex; right: 10px;top: 28px; }
+/* 로케이션 버튼 */
+.btnlocation{z-index: 50; display: none; width: 50px;}
+.btnlocation img{object-position: 25px;}
+/* 스토어버튼 */
+.btnstore{z-index: 50; display: none; width: 50px;}
+.btnstore img{object-position: 25px;}

@@ -1,0 +1,31 @@
+/* footer */
+#footer {background-color: #f9f9f9; color: #000; padding: 50px 0; font-size: 14px;}
+.foot_top {display: flex; justify-content: space-between; align-items: center;}
+.foot_top ul {list-style: none;display: flex; font-weight: 500; color: #000;}
+.foot_top ul li {margin-right: 38px;}
+.foot_top ul li a {color: #000;text-decoration: none;}
+.foot_body{display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;}
+.foot_body h2 {font-size: 25px; font-weight: 700; letter-spacing: -.75px; margin: 32px 0;}
+.foot_info {font-size: 14px; color: #222; line-height: 26px;}
+.foot_info address {display: block;}
+.foot_info span {display: block;}
+.foot_info p{margin-top: 30px; color: #222; letter-spacing: -.42px; font-size: 14px;}
+.sns>li{width: 23px; height: 23px;}
+.etc a:hover{text-decoration: underline; font-weight: bold;}
+
+/* 패밀리 사이트 */
+.family_site {border: 1px solid #ccc; width: 250px; height: 50px; letter-spacing: -0.4px;}
+.family_site.on {border: 0;}
+.family_site a {display: block; padding-left: 20px; font-size: 16px; color: #555;}
+.family_site>ul>li>a {z-index: 1; height: 50px; line-height: 50px;}
+.family_site>ul {position: relative; left: 0; top: 50%; transform: translateY(-50%);}
+.family_site>ul::after {position: absolute; right: 20px; bottom: 20px; content: ''; width: 14px; height: 9px; background: url(../img/select-arrow.png) no-repeat 0 0;}
+.family_site.on>ul::after {transform: rotate(180deg);}
+.family_site>ul>li>ul {z-index: -1; opacity: 0; padding: 10px 0 40px; position: absolute; left: 0; bottom: 0%; width: 100%; border: 1px solid #ccc; background: #fff; transition: all 0.2s ease;}
+.family_site.on>ul>li>ul {opacity: 1;}
+.family_site>ul>li>ul>li {margin-bottom: 15px;}
+
+/* 탑버튼 */
+a.btn_top{position: fixed; bottom: 30px; right: 50px; width: 60px; height: 60px; background: url(../img/btn-top.png) no-repeat 50% 50%;background-size: 50%; font-size: 13px; color: #333; text-align: center; line-height: 80px; cursor: pointer; background-color: #003a70; border-radius: 50%; z-index: 9999; text-indent: -999999px; display: none; transition: 1s ease-in-out;}
+a.btn_top.on{display: block;}
+a.btn_top.ab{position: absolute; bottom: auto; top: -100px; right: 80px;}

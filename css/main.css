@@ -1,0 +1,493 @@
+
+/* main.css */
+
+/* layout */
+.main_banner {z-index: 10; position: relative; width: 100%; height: 100vh;}
+/* .content_inner{margin: 0 auto; max-width: 1400px;} */
+.content1 {width: 100%; background: #0056AA;}
+.content2 {width: 100%; height: 100vh;position: relative;}
+.content3 {width: 100vw; height: 100vh; object-fit: cover; transition: all .4s ease 0s;}
+  .content3_inner{margin: 0 auto; max-width: 1400px;}
+.content4 {width: 100%;height: 100vh;object-fit: cover; transition: all .4s ease 0s;}
+.content4_inner{margin: 0 auto; max-width: 1400px;}
+.content5 {width: 100%; background: #0056AA; }
+.content6 {max-width: 1400px; margin: 0 auto; width: 100vw;}
+.content7 {margin: 0 auto; max-width: 1400px;}
+
+
+/* 메인베너 */
+.slide_wrap>li {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100vh;}
+.slide_wrap>li.active {display: block;}
+.slide_wrap>li>video {width: 100%; height: 100%; object-fit: cover; filter: brightness(80%);}
+.slide_wrap>li::after {z-index: 12; position: absolute; left: 50%; bottom: 40px; transform: translateX(-16.5px); content: ''; display: block; width: 33px; height: 51px; background: url(../img/icon-scroll.png) no-repeat 0 0; animation: scroll_ani 1s ease-out 0s infinite alternate;}
+@keyframes scroll_ani {
+  0% {bottom: 50px;}
+  100% {bottom: 40px;}
+}
+
+/* 글씨 */
+.slide_txt {position: absolute; width: 73vw; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+
+.main_bnn_title {margin-bottom: 7px; font-size: 70px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif; color: #fff; letter-spacing: -1.4px;}
+.main_bnn_txt {font-size: 25px; font-weight: 300; color: #fff; text-indent: 4px; letter-spacing: 0.2px;}
+
+.slide-in span {position: relative;transform: translateY(100%);opacity: 0;animation: slideIn 1s forwards;}
+.slide-in span:nth-child(2) {animation-delay: 0.2s;}
+.slide-in span:nth-child(3) {animation-delay: 0.4s;}
+.slide-in span:nth-child(4) {animation-delay: 0.6s;}
+.slide-in span:nth-child(5) {animation-delay: 0.8s;}
+.slide-in span:nth-child(6) {animation-delay: 1s;}
+.slide-in span:nth-child(7) {animation-delay: 1.2s;}
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slide-up 1s forwards;
+}
+@keyframes slide-up {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0%);
+  }
+}
+
+/* 슬라이드 버튼 */
+.slide_arrow {z-index: 11; display: flex; justify-content: space-between; width: 95.4vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.slide_arrow>button {display: flex; flex-direction: column; align-items: center; background: transparent; border: none; cursor: pointer;}
+.slide_arrow span {padding-top: 10px; font-size: 16px; font-family: 'Public Sans', sans-serif; color: #fff;}
+
+/* 슬라이드 번호 선택 */
+.slide_control {display: flex; position: absolute; bottom: 29%; left: 50%;transform: translateX(-50%);}
+.slide_select_btn {display: flex;}
+.slide_select_btn>li {display: flex; margin-right: 40px;}
+.slide_select_btn>li>a {font-size: 14px; font-family: 'Public Sans', sans-serif; font-weight: 600; color: #fff; letter-spacing: 1px;}
+.slide_control_btn {display: flex;}
+
+.slide_control_btn>li>a {display: block; width: 14px; height: 16px; text-indent: -9999px;}
+.slide_control_btn>li>a.btn_play {margin-right: 20px; background: url(../img/btn-play.png) no-repeat 0 0;}
+.slide_control_btn>li>a.btn_pause {background: url(../img/btn-stop.png) no-repeat 0 0;}
+
+.video-duration-bar {display: inline-block;height: 2px;
+width: 70px; background-color: #eee;vertical-align: middle; position: relative;overflow: hidden; margin-left: 10px; margin-top: 7px;border-radius: 50%; display: none;}
+.video-duration-bar-inner {height: 2px;width: 70px;background-color: #2c21213b;position: absolute;left: 0;animation: moveBar 10s linear infinite;}
+.video-duration-bar.on{display: block;}
+@keyframes moveBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* content1  */
+.content1>ul {position: relative; width: 100%; height: 540px ;background-color: #0056aa; color: #fff; display: flex;  max-width: 1400px; margin: 0 auto;
+justify-content: space-around;align-items: center;}
+.content1>ul:after {content: ""; width: 1px; height: 100px; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+background-color: #fff;}
+.content1>ul>li>dl{text-align: center; margin-bottom: 100px;}
+.content1>ul>li>dl>dt{font-size: 30px; font-weight: 400; padding-top: 52px;padding-left: 8px; height: 120px;}
+.content1>ul>li>dl>dd{line-height: 30px;text-align: center;font-size: 18px;}
+.content1>ul>li>dl>dt>span{font-size: 70px;}
+/* content1 transition */
+.content1 li {flex: 1;text-align: center;
+opacity: 1;transform: translateY(50px);animation: slide-in 0.5s ease forwards;}
+.content1 li:nth-child(2) {animation-delay: 0.2s;}
+.content1 li:nth-child(3) {animation-delay: 0.4s;}
+.content1 li:nth-child(4) {animation-delay: 0.6s;}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* content2 */
+.slider {width: 100%; height: 100vh; position: relative;
+display: flex; transition: all 0.5s; overflow: hidden;}
+.slider .slide {width: 30%; height: 100%; position: relative;
+text-align: center; transition: 0.5s;}
+.slider .slide:nth-child(1) { background: url(../img/img-product-gl.png) no-repeat; background-size: cover; background-position: left;}
+.slider .slide:nth-child(2) {background: url(../img/img-product-lens.png) no-repeat ;background-size: cover;background-position: left;}
+.slider .slide:nth-child(3) {background: url(../img/img-product-contact.png) no-repeat ;background-size: cover;background-position: left;}
+.slider .slide:nth-child(4) {background: url(../img/img-product-bo.png) no-repeat ;background-size: cover;background-position: left;}
+.slider .slide:hover {width: 60%;cursor: pointer;}
+
+.slider .slide a {position: absolute; top: 50%; left: 50%;
+transform: translate(-50%, -50%); font-size: 20px; opacity: 0; transition: all 0.5s; color: #0056aa; border: 1px solid #0056aa; width: 200px; height: 50px; text-align: center; line-height: 50px; font-weight: 400; overflow: hidden;}
+.slider .slide:hover a {font-size: 30px; color: #fff; opacity: 1; background-color:  #0056AA; width: 100%; text-align: center;}
+.content2 .slide a:after { content: '»'; position: absolute; opacity: 0; transition: 0.5s; left: 30%}
+.content2 .slide a:hover {padding-right: 24px; padding-left: 8px;}
+.content2 .slide a:after { opacity: 1;right: 10px;}
+/* content2 transition */
+.slide {width: 30%;height: 100%; position: relative;text-align: center;animation-duration: 0.5s;animation-fill-mode: both;animation-timing-function: ease-in-out;}
+.s1 {animation: slide-in-bottom 0.2s;}
+.s2 {animation: slide-in-bottom 0.4s;}
+.s3 {animation: slide-in-bottom 0.6s;}
+.s4 {animation: slide-in-bottom 0.8s;}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* content3 - 눈건강 시력 지킴이 */
+.content3 article {text-align: left; padding: 150px;}
+.content3 img{position: absolute; z-index: -1; height: 100vh; width: 100vw;}
+.content3 article h2 { font-size: 50px; font-weight: 600; margin-bottom: 30px;}
+.content3 article p { font-size: 18px; line-height: 30px; letter-spacing: -0.54px; margin-bottom: 60px; padding-top: 10px;}
+/* 더보기 */
+.content3 .btn_detail {border-radius: 4px;color:  #0056AA; text-align: center; font-size: 16px; padding: 16px; width: 100px; transition: all 0.5s; cursor: pointer; display: inline-block; position: relative;}
+.content3 .btn_detail:after { content: '»'; position: absolute; opacity: 0; top: 14px; right: -20px; transition: all 0.2s ease-in-out;}
+.content3 .btn_detail:hover {padding-right: 24px; padding-left: 8px; background-color:  #0056AA;  color: #fff;  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7); }
+.content3 .btn_detail:hover:after { opacity: 1;right: 10px; }
+
+
+/* content4 - 고객가치 경영연구원 */
+.content4 article {text-align: right;padding: 150px;}
+.content4 img{position: absolute; z-index: -1; height: 100vh; width: 100vw;}
+.content4 img:hover { transform: scale(1.1); }
+.content4 article h2 {font-size: 50px;font-weight: 600;}
+.content4 article p {font-size: 18px; line-height: 30px; letter-spacing: -0.54px; margin-bottom: 90px; padding-top: 30px;}
+/* 더보기 */
+.content4 .btn_detail {border-radius: 4px; color: #0056AA; text-align: center; font-size: 16px; padding: 16px; width: 100px; transition: all 0.5s; cursor: pointer; display: inline-block; position: relative; }
+.content4 .btn_detail:after { content: '»'; position: absolute; opacity: 0; top: 14px; right: -20px; transition: all 0.2s ease-in-out;}
+.content4 .btn_detail:hover {padding-right: 24px; padding-left: 8px; background-color:  #0056AA;  color: #fff;  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7); }
+.content4 .btn_detail:hover:after { opacity: 1;right: 10px; }
+
+/* content3 & content4 transition */
+.content3 h2,
+.content3 p,
+.content3 span,
+.content4 h2,
+.content4 p,
+.content4 span {opacity: 0;transform: translateY(50px);transition: opacity 0.5s ease-out, transform 0.5s ease-out;}
+.content3 span,
+.content4 span {transition-delay: 0.5s;}
+.content3.show h2,
+.content3.show p,
+.content3.show span,
+.content4.show h2,
+.content4.show p,
+.content4.show span {opacity: 1;transform: translateY(0);}
+.content3.show img,
+.content4.show img {transform: scale(1.2); transition: transform 0.5s ease-out;}
+
+
+/* content5 */
+.content5>ul {height: 500px;width: 100vw;display: flex;align-items: center;
+justify-content: space-around;background-color: #0056aa;
+max-width: 1400px;margin: 0 auto;}
+.content5>ul>li {z-index: 3; width: 150px;height: 130px;}
+.content5>ul>li:first-child{background: url(../img/icon-quick-01.png);}
+.content5>ul>li:nth-child(2){background: url(../img/icon-quick-02.png);}
+.content5>ul>li:nth-child(3){background: url(../img/icon-quick-03.png);}
+.content5>ul>li:nth-child(4){background: url(../img/icon-quick-04.png);}
+.content5>ul>li>a {display: flex;flex-direction: column;align-items: center;justify-content: flex-end;height: 100%;padding-bottom: 20px;
+color: #fff;font-size: 18px;text-decoration: none;margin: 30px;
+background-position: 0% -50%;position: relative;}
+/* content 5 transition */
+.content5 ul li {opacity: 0;position: relative;bottom: -20px; z-index: 10;}
+.content5 ul li:nth-child(1) {animation: slideIn 0.4s ease 0.1s forwards;}
+.content5 ul li:nth-child(2) {animation: slideIn 0.4s ease 0.2s forwards;}
+.content5 ul li:nth-child(3) {animation: slideIn 0.4s ease 0.3s forwards;}
+.content5 ul li:nth-child(4) {animation: slideIn 0.4s ease 0.4s forwards;}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+/* .content5>ul>li:hover>a{color: #0056aa; z-index: 1;}
+.content5>ul>li::after{content:"";  position: absolute; background-color: #fff;width: 290px; height: 290px; border-radius: 50%; opacity: 0; left: 50%;top: 50%;transform: translate(-50%, -50%); transition: all .5s ease-in-out;}
+.content5>ul>li:hover::after{opacity: 1;}
+ 
+
+.content5>ul>li:hover {z-index: 30; background-position: -160px;  background-color: red; } */
+
+
+/* content 6 - instagram */
+.content6 h2.instagram { font-size: 3rem; font-weight: bold; text-align: left; margin: 1.5rem; }
+.content6 ul { list-style: none; margin: 0; padding: 0; display: grid;grid-template-columns: repeat(4, 1fr); grid-gap: 1.5rem; }
+.content6 li {position: relative; padding-bottom: 100%; overflow: hidden; }
+.content6 img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.content6 .icon { position: absolute; top: 90%; left: 90%; transform: translate(-50%, -50%); display: block; width: 40px; height: 40px; background: url(../img/icon-instagram-carousel.png) no-repeat ;background-size: cover; }
+.content6 .a11y { position: absolute; clip: rect(0 0 0 0); overflow: hidden; white-space: nowrap; }
+.content6 img {transition: transform 0.2s ease-in-out; }
+.content6 img:hover { transform: scale(1.1); }
+/* content 6 transition */
+.content6 li {animation-name: slide-in;animation-duration: 0.5s;animation-fill-mode: both;}
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.content6 li:nth-child(1),
+.content6 li:nth-child(5) {animation-delay: 0s;}
+.content6 li:nth-child(2),
+.content6 li:nth-child(6) {animation-delay: 0.1s;}
+.content6 li:nth-child(3),
+.content6 li:nth-child(7) {animation-delay: 0.2s;}
+.content6 li:nth-child(4),
+.content6 li:nth-child(8) {animation-delay: 0.3s;}
+
+
+/*  content7  */
+.content7>div {display: flex; justify-content: space-between; box-sizing: border-box; padding: 80px 0;}
+.content7>div>div {width: 50%;}
+.content7>div>div:nth-of-type(1) {margin-right: 30px;}
+.content7>div h2 {margin-bottom: 30px; font-size: 35px; font-weight: 900; letter-spacing: 0.2px;}
+.content7>div ul>li>a{font-size: 18px; line-height: 30px; color: #222; cursor: pointer;}
+
+/* 더보기 아이콘 */
+.content7>div>div>a {position: absolute; top: 0; right: 0; width: 40px; height: 40px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box;}
+.content7>div>div>a::before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+.content7>div>div>a::after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333;}
+
+/* 다비치 소식 */
+.davich_news {position: relative;}
+.davich_news>ul>li {display: flex; align-items: center; width: 100%; height: 78px; line-height: 30px; border-top: 1px solid #eee;}
+.davich_news>ul>li>a {font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.3px;}
+.davich_news>ul>li:nth-of-type(3) {border-bottom: 1px solid #eee;}
+
+/* 신규 오픈 매장 */
+.newly_opened_store {position: relative; overflow: hidden;}
+.newly_opened_store>ul {display: flex; transition: all 0.5s ease;}
+.newly_opened_store>ul>li {position: relative; display: block; width: 680px; height: 239px; background: url(../img/img-grand-open.png) no-repeat 0 0; background-size: cover;}
+.newly_opened_store>ul>li:nth-of-type(1) {display: block;}
+.newly_opened_store>ul>li>a {display: block; width: 100%; height: 100%;}
+.newly_opened_store>ul>li>a>div {position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 300px; font-weight: 600; color: #fff;}
+.newly_opened_store>ul>li>a>div>h3 {margin: 0 0 10px; font-weight: 600;}
+#container .newly_opened_store>ul>li:nth-of-type(1)>a>div>h3 {font-size: 28px;}
+.newly_opened_store>ul>li>a>div>h3.long_txt {font-size: 32px;}
+.newly_opened_store>ul>li>a>div>h3.short_txt {font-size: 40px;} 
+.newly_opened_store>ul>li>a>div>p {font-size: 22px;}
+.newly_opened_store h2{margin-top: -10px;}
+
+
+/* Media Queries */
+
+/* Mobile 크기 */
+@media screen and (min-width: 320px) and (max-width:480px) {
+  img {max-width: 100%;height: auto;}
+  .main_bnn_title{font-size: 40px !important; text-align: center;}
+  .main_bnn_txt{font-size: 15px !important; text-align: center;}
+
+  /* content1 */
+  .content1>ul>li>dl>dt>span{font-size: 38px !important;}
+  .content1>ul>li>dl>dt{font-size: 0.0px !important;}
+  .content1>ul>li>dl>dd{font-size: 12px !important;}
+  .content2 .slide a:after {display: none;}
+  
+
+  /* content3 - 눈건강시력 지킴이 */
+  .content3{background: url(../img/MQ/img-main-fullbanner-01.png) 20% 100%; background-size: cover;}
+  .content3 article h2{font-size: 30px; padding-left: 10px;}
+  .content3 article p{width: 120%; padding-left: 10px;}
+  .content3 article{padding-left: 10px; margin-top: -100px;}
+
+  /* 더보기 */
+  .content3 article .btn_detail{text-indent: -9999px; width: 30px; height: 30px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box; left: 310px; top: -315px;}
+  .content3 article .btn_detail:before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+  .content3 article .btn_detail:after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333; opacity: 1;}
+
+  .content3 article .line{display: none !important;}
+
+  /* content4 - 고객가치경영연구원 */
+  .content4{background: url(../img/MQ/img-main-fullbanner-02.png) 50% 50%; background-size: cover;}
+  .content4_inner{width: 100vw; text-align: center; margin-top: -30px;}
+  .content4 article .line{display: none;}
+  .content4 article{padding-left: 10px;}
+  .content4 article h2{font-size: 30px;}
+  .content4 article p{}
+
+  /* 더보기 */
+  .content4 article .btn_detail{text-indent: -9999px; width: 30px; height: 30px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box; top: -50px; justify-content: center;}
+  .content4 article .btn_detail:before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+  .content4 article .btn_detail:after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333; opacity: 1;}
+  .content4 article .btn_detail:hover{border: none;}
+  .content4 article .btn_detail:hover::after,.content4 article .btn_detail:hover::before{background: #fff;}
+
+
+  /* content6 */
+  .content6 h2{font-size: 30px !important; text-align: center !important;}
+
+  /* content7 */
+  .content7>div{display: grid;}
+  .content7_inner{display: flex; justify-content: center !important; }
+  .davich_news{width: 650px !important;}
+  .newly_opened_store {width: 650px !important; padding-top: 50px;}
+  .newly_opened_store>ul>li{background-size: cover !important; }
+  .content7>div>div:last-child>a{margin-top: 50px;}
+  .content7 h2{text-align: center; font-size: 30px ;}
+  .content7 .davich_news li>a{display: flex; transform: translateX(20%);}
+  .content7 .davich_news li:nth-of-type(2) a{transform: translateX(15%);}
+
+  /* 신규오픈매장 */
+  .newly_opened_store>ul>li {position: relative; display: block; width: 680px; height: 239px; background: url(../img/img-grand-open-m.png) no-repeat 100% 100%; background-size: cover;}
+}
+
+
+/* Tablet 크기 */
+@media screen and (min-width:481px) and (max-width:768px){
+  img {max-width: 100%;height: auto;}
+  .main_bnn_title{font-size: 40px !important; text-align: center;}
+  .main_bnn_txt{font-size: 15px !important; text-align: center;}
+
+  /* content1 */
+  .content1>ul>li>dl>dt>span{font-size: 38px !important;}
+  .content1>ul>li>dl>dt{font-size: 0.0px !important;}
+  .content1>ul>li>dl>dd{font-size: 12px !important;}
+  .content2 .slide a:after {display: none;}
+
+  /* content3 - 눈건강시력 지킴이 */
+  .content3{background: url(../img/MQ/img-main-fullbanner-01.png) 20% 100%; background-size: cover;}
+  .content3 article h2{font-size: 30px; padding-left: 10px;}
+  .content3 article p{width: 120%; padding-left: 10px;}
+  .content3 article{padding-left: 10px; margin-top: -100px;}
+   /* 더보기 */
+  .content3 article .line{display: none !important;}
+
+  /* content4 - 고객가치경영연구원 */
+  .content4{background: url(../img/MQ/img-main-fullbanner-02.png) 50% 50%; background-size: cover;}
+  .content4_inner{width: 100vw; text-align: center; margin-top: -30px;}
+  .content4 article .line{display: none;}
+  .content4 article{padding-left: 10px;}
+  .content4 article h2{font-size: 30px;}
+  .content4 article p{}
+
+  /* 더보기 */
+  .content4 article .btn_detail{text-indent: -9999px; width: 30px; height: 30px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box; top: -50px; justify-content: center;}
+  .content4 article .btn_detail:before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+  .content4 article .btn_detail:after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333; opacity: 1;}
+  .content4 article .btn_detail:hover{border: none;}
+  .content4 article .btn_detail:hover::after,.content4 article .btn_detail:hover::before{background: #fff;}
+
+  /* content5 */
+  .content5>ul>li>a{font-size: 12px !important;}
+
+  /* content6 */
+  .content6 .instagram{margin-left: 0 !important;}
+  .content6 h2{text-align: center !important;}
+
+  /* content7 */
+  .content7>div{display: grid;}
+  .content7_inner{display: flex; justify-content: center !important; }
+  .davich_news{width: 650px !important;}
+  .newly_opened_store {width: 650px !important; padding-top: 50px;}
+  .newly_opened_store>ul>li{background-size: cover !important; }
+  .content7>div>div:last-child>a{margin-top: 50px;}
+  .content7 h2{text-align: center;}
+  .content7 .davich_news li>a{display: flex; transform: translateX(20%);}
+  .content7 .davich_news li:nth-of-type(2) a{transform: translateX(15%);}
+  
+  /* 신규오픈매장 */
+  .newly_opened_store>ul>li {position: relative; display: block; width: 680px; height: 239px; background: url(../img/img-grand-open-m.png) no-repeat 100% 100%; background-size: cover;}
+}
+
+
+/* Laptops 크기*/
+@media screen and (min-width:769px) and (max-width:1023px) {
+  .main_bnn_title{font-size: 40px !important; text-align: center;}
+  .main_bnn_txt{font-size: 15px !important; text-align: center;}
+  /* content1 */
+  .content1>ul>li>dl>dt>span{font-size: 38px !important;}
+  .content1>ul>li>dl>dt{font-size: 14px !important;}
+  .content1>ul>li>dl>dd{font-size: 12px !important;}
+
+  /* content2 */
+  .content2 .slide a:after {display: none;}
+
+
+  /* content3 - 눈건강시력 지킴이 */
+  .content3{background: url(../img/MQ/img-main-fullbanner-01.png) 100% 70%; background-size: cover;}
+  .content3_inner{margin-left: -100px;}
+  .content3 p{width: 100%;}
+
+  /* 더보기 */
+  .content3 article .btn_detail{text-indent: -9999px; width: 30px; height: 30px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box; top: -240px; right: -450px; border-radius: 0;}
+  .content3 article .btn_detail:before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+  .content3 article .btn_detail:after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333; opacity: 1;}
+  .content3 article .line{display: none !important;}
+  .content3 article .btn_detail:hover{border: none;}
+  .content3 article .btn_detail:hover::after,.content3 article .btn_detail:hover::before{background: #fff;}
+
+  /* content4 - 고객가치경영연구원 */
+  .content4{background: url(../img/MQ/img-main-fullbanner-02.png) 50% 50%; background-size: cover;}
+  .content4 article .line{display: none !important;}
+  .content4 article p{display: none;}
+  /* 더보기 */
+  .content4 article .btn_detail{text-indent: -9999px; width: 30px; height: 30px; border: 1px solid #222; text-indent: -9999px; overflow: hidden; box-sizing: border-box; top: -50px; right: -60px; border-radius: 0;}
+  .content4 article .btn_detail:before {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1px; height: 20px; background: #333;}
+  .content4 article .btn_detail:after {position: absolute; content: ''; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 20px; height: 1px; background: #333; opacity: 1;}
+  .content4 article .btn_detail:hover{border: none;}
+  .content4 article .btn_detail:hover::after,.content4 article .btn_detail:hover::before{background: #fff;}
+
+
+  /* content6 */
+  .content6 h2{text-align: center !important;}
+
+
+  /* content7 */
+  .content7>div{display: grid;}
+  .content7_inner{display: flex; justify-content: center !important; }
+  .davich_news{width: 650px !important;}
+  .newly_opened_store {width: 650px !important; padding-top: 50px;}
+  .newly_opened_store>ul>li{background-size: cover !important; }
+  .content7>div>div:last-child>a{margin-top: 50px;}
+
+}
+
+/* 헤더 겹치는 지점 */
+@media only screen and (min-width: 993px) and (max-width: 1700px) {
+  /* content1 */
+  .content1>ul>li>dl>dt>span{font-size: 70px !important;}
+  .content1>ul>li>dl>dt{font-size: 14px !important;}
+  .content1>ul>li>dl>dd{font-size: 12px !important;}
+
+  /* contnet2 */
+  .content2 .slide a:after {display: none;}
+
+  /* content3 & content4 */
+  .content3 img,.content4 img{height: 100vh; width: 100vw; opacity: 1;}
+
+  /* 신규오픈매장 */
+  .newly_opened_store>ul>li {position: relative; display: block; width: 680px; height: 239px; background: url(../img/img-grand-open-m.png) no-repeat 100% 100%; background-size: cover;}
+
+}
+
+
+/* TV / Extra Large 크기 */
+@media only screen and (min-width: 1201px) {
+  
+}
+
+
+

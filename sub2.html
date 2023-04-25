@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> PARTNERSHIP | DAVICH </title>
+<link rel="stylesheet" href="css/import.css">
+<link rel="stylesheet" href="css/sub2.css">
+<script defer src="JS/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="icon" href="favicon_io/favicon.ico">
+<script>
+/* content6 - 테이블 */
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = ['all', 'seoul-btn', 'youngnam-btn', 'gyeonggi-btn', 'other-btn'];
+  const tables = ['seoul', 'youngnam', 'gyeonggi', 'other'];
+
+  const setTableDisplay = (activeTable) => {
+    tables.forEach(table => {
+      document.querySelector(`.${table}`).style.display = activeTable === 'all' || activeTable === table ? 'table' : 'none';
+    })
+  };
+  const setActiveBtn = (activeBtn) => {
+    btns.forEach(btn => {
+      const btnElement = document.querySelector(`.${btn}`);
+      if (btn === activeBtn) {
+        btnElement.classList.add("active");
+      } else {
+        btnElement.classList.remove("active");
+      }
+    })
+  };
+  btns.forEach(btn => {
+    document.querySelector(`.${btn}`).addEventListener("click", () => {
+      setTableDisplay(btn.replace('-btn', ''));
+      setActiveBtn(btn);
+    })
+  })
+});
+</script>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div id="skipNavi"><a href="#container">본문바로가기</a></div>
+<!-- //본문 바로가기 -->
+<hr />
+<div id="wrap">
+<!-- header -->
+<div id="header">
+
+</div>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+  <!-- spot -->
+<div class="spot">
+  <div class="spot_inner">
+    <h2 class="slide-in">
+      <span>가</span><span>맹</span><span>점</span><span> 개</span><span>설</span><span>안</span><span>내</span>
+    </h2>
+      <p class="animate-in">우리지역 1등 매장! No.1 브랜드 다비치와 함께하세요.</p>
+  </div>
+  <!-- //spot_inner -->
+</div>
+<!-- //spot -->
+<!-- content -->
+<div id="content">
+    <div class="content_inner">
+
+      <!-- content1 -->
+      <section class="content1">
+          <h3>다비치만의 성공전략 노하우</h3>
+        <div class="circle">
+          <div class="animate-in">
+              <strong>지역핵심상권의대표</strong>
+              <p>전문적인 상권분석을 통한<br />지역최고의 1등 매장오픈</p>
+          </div>
+          <div class="animate-in">
+              <strong>전략정책을 바탕으로 한<br />운영 노하우 접목</strong>
+              <p>최고의 컨설팅 제공으로<br />다비치만의 차별화 정책</p>
+          </div>
+          <div class="animate-in">
+              <strong>지속적인<br /> 신규고객창출확보</strong>
+              <p>다비치 고객만족 시스템</p>
+          </div>
+        </div>
+      </section>
+      <!-- //content1 -->
+
+      <!-- content2 -->
+      <section class="content2 animate-in scroll-section">
+        <div class="content2_inner">
+        <h3>점포모델</h3>
+        <p>다비치안경점은 대로변에 위치하고 전면 간판 12m 노출,<br />50~80평이상의 대형 매장에서 성공적으로 운영되고 있습니다.</p>
+        </div>
+      </section>
+      <!-- //content2 -->
+
+      <section class="content3 animate-in scroll-section">
+          <ul class="banner">
+          <li><img src="sub2/img-partnership-slide-main.png" alt="다비치 1층" /><span>1층 모델</span></li>
+          <li><img src="sub2/img-partnership-slide-main-02.png" alt="다비치 1층" /><span>2층 모델</span></li>
+          <li><img src="sub2/img-partnership-slide-01.png" alt="정찰코너" /><span>정찰코너</span></li>
+          <li><img src="sub2/img-partnership-slide-02.png" alt="콘택트렌즈 코너" /><span>콘택트렌즈 코너</span></li>
+          <li><img src="sub2/img-partnership-slide-03.png" alt="비비엠 코너" /><span>비비엠 코너</span></li>
+          <li><img src="sub2/img-partnership-slide-04.png" alt="수입안경 코너" /><span>수입안경 코너</span></li>
+          <li><img src="sub2/img-partnership-slide-05.png" alt="매장전경" /><span>매장전경</span></li>
+          <li><img src="sub2/img-partnership-slide-06.png" alt="다비치카페" /><span>다비치카페</span></li>
+          <li><img src="sub2/img-partnership-slide-07.png" alt="트루뷰존" /><span>트루뷰존</span></li>
+          <li><img src="sub2/img-partnership-slide-08.png" alt="비전케어LAB" /><span>>비전케어LAB</span</li>
+          <li><img src="sub2/img-partnership-slide-09.png" alt="검안실" /><span>검안실</span></li>
+          <li><img src="sub2/img-partnership-slide-10.png" alt="키오스크" /><span>키오스크</span></li>
+          <li><img src="sub2/img-partnership-slide-11.png" alt="" /><span>난시멀티포컬센터</span></li>
+          </ul> 
+      </section>
+
+      <section class="content4 animate-in scroll-section">
+        <div class="content4_inner">
+          <h3>개설절차</h3>
+
+          <div class="open">
+          <div class="counseling">
+              <h4>Counseling</h4>
+              <p>신규 오픈 희망시 담당자와 가맹상담 진행<br />(상담 후 예비점주 등록 필요)</p>
+          </div>
+
+          <div class="period">
+              <h4>Process Period</h4>
+              <p>점포 확보에 소요되는 시간에 따라 오픈까지의<br /> 전체기간 차이 발생<br />(점포 계약 후 오픈까지 평균 1-2개월소요)</p>
+          </div>
+          </div>
+
+          <div class="process">
+              <ol>
+                <div>
+                  <li>01.접수</li>
+                  <span>본사방문(창업설명회 참석)<br /> 또는 창업센터 전화상담</span>
+                </div>
+                <div class="arrow arrow1"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>02.상담</li>
+                  <span>지역별 가맹 개발자와 상담<br />(점포 입점 가능여부, 다비치<br />전략 정책 설명, 정보공개서)</span>
+                </div>
+                <div class="arrow arrow2"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>03.상권조사 밎<br />현장답사</li>
+                  <span>해당지역 실사를 통한<br />점포 후보 매장 조사</span>
+                </div>
+                <div class="arrow arrow3"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>04.점포계약</li>
+                  <span>점포 임대차 계약 (건물주)</span>
+                </div>
+                <div class="arrow arrow4"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>05.계약</li>
+                  <span>가맹 계약 (다비치 점주)</span>
+                </div>
+                <div class="arrow arrow5"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div class="sep">
+                  <li>06.시공</li>
+                  <span>인테리어 시공 25일<br />(변동사항 있음)</span>
+                </div>
+                <div class="arrow arrow6"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>07.점주교육</li>
+                  <span>(신규자 교육 5박6일,<br />파견근무2주)</span>
+                </div>
+                <div class="arrow arrow7"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>08.오픈</li>
+                  <span>다비치 안경점 오픈</span>
+                </div>
+                <div class="arrow arrow8"><img src="sub2/icon-arrow (1).png" alt="right arrow icon"></div>
+                <div>
+                  <li>09.사후관리</li>
+                  <span>30일 과정 밎<br /> 지속적인 컨설팅</span>
+                </div>
+              </ol>
+          </div>
+          </div>
+      </section>
+
+      <section class="content5 animate-in scroll-section">
+        
+          <h3>오픈가능지역</h3>
+          <!-- 우선권 -->
+          <div class="pas">
+            <p>해당지역 안경사님께 오픈 우선권을 드립니다!</p>
+              <ul>
+              <div>
+              <span><img src="sub2/icon-partnership-01.png" alt="medal icon"></span>
+              <li>지역 내 1등이 가능한 <br />  상권 및 점포</li>
+              </div>
+              <div>
+              <span><img src="sub2/icon-partnership-02.png" alt="bag icon" /></span>
+              <li>전국 시단위 이상 지역<br /><span>(단, 읍단위의 경우<br />시 수준 상권 형성 지역)</span></li>
+              </div>
+              <div>
+              <span><img src="sub2/icon-partnership-03.png" alt="train icon" /></span>
+              <li>시가지 핵심상권, 역세권,<br />대규모 역사, 핵심지역</li>
+              </div>
+              <div>
+              <span><img src="sub2/icon-partnership-04.png" alt="appartment icon" /></span>
+              <li>대단위 아파트 단지 내 상가<br /><span>(단, 기존 가맹점 상권 내<br />오픈 불가능)</span></li>
+              </div>
+              </ul>
+          </div>
+          <!-- //우선권 -->
+
+          <!-- 가입 자격 및 조건-->
+          <div class="qualify">
+            <!-- 가입자격 -->
+            <div class="qualifiction">
+              <h4>가입자격</h4>
+              <p>
+                <span>- 현제 안경원 운영 또는 신규 개설 희망자</span>
+                <span>- 체인 가족 공동체로서 한마음이 될 수 있는 안경사</span>
+              </p>
+            </div>
+            <!-- //가입자격 -->
+            <!-- 가입조건 -->
+            <div class="condition">
+              <h4>가입조건</h4>
+              <p>
+                <span>- 가맹점 가입비 : 2,500만원(VAT별도)</span>
+                <span>- 정기 지급급 : 월 100만원(VAT별도)</span>
+              </p>
+            </div>
+            <!-- //가입조건 -->
+          </div>
+          <!-- //가입 자격 및 조건-->
+      </section>
+      <!-- //content5 -->
+
+      <!-- content6 -->
+      <section class="content6 animate-in scroll-section">
+        <div class="place">
+          <div class="place-btn">
+            <button class="location all active"> 전체 </button>
+            <button class="location seoul-btn"> 서울지역 </button>
+            <button class="location youngnam-btn"> 영남지역 </button>
+            <button class="location gyeonggi-btn"> 경기지역 </button>
+            <button class="location other-btn"> 그외지역 </button>            
+          </div>
+          <!-- 서울지역 -->
+          <table class="seoul">
+          <caption>서울지역</caption>
+          <tbody>
+          <tr>
+          <th>강동구</th>
+          <td>상일역/강동구청역</td>
+          <th>강남구</th>
+          <td>압구정/강남구청역/강남역/수서역/논현동</td>
+          </tr>
+          <tr>
+          <th>강서구</th>
+          <td>까치산역/화곡역/방화동 가양역</td>
+          <th>관악구</th>
+          <td>낙성대역/난곡사거리</td>
+          </tr>
+          <tr>
+          <th>광진구</th>
+          <td>건대입구역/자양사거리/군자역/아차산</td>
+          <th>구로구</th>
+          <td>신도림동 테크노마트/구로구청 사거리/개봉역</td>
+          </tr>
+          <tr>
+          <th>노원구</th>
+          <td>수락산역/상계역/마들역/은행사거리(중계학원가)</td>
+          <th>동대문구</th>
+          <td>회기역/청량리역/전농동사거리</td>
+          </tr>
+          <tr>
+          <th>동작구</th>
+          <td>상도역/흑석역/남성역/노량진역/장승배기</td>
+          <th>마포구</th>
+          <td>공덕역 사거리/합정역/망원동/디지털미디어시티</td>
+          </tr>
+          <tr>
+          <th>서대문구</th>
+          <td>홍제역/ 가좌동 모래내시장</td>
+          <th>서초구</th>
+          <td>반포동 고속터미널/교대/남부터미널/양재</td>
+          </tr>
+          <tr>
+          <th>성동구</th>
+          <td>행당동 무학여고사거리/성수동</td>
+          <th>성북구</th>
+          <td>석계역/석관동/종암동/성신여대입구/한성대입구
+          </tr>
+          <tr>
+          <th>송파구</th>
+          <td>문정동 법조타운(가든파이브)/거여역/방이동/개롱역</td>
+          <th>영등포구</th>
+          <td>당산역/영등포구청</td>
+          </tr>
+          <tr>
+          <th>은평구</th>
+          <td>은평뉴타운</td>
+          <th>종로구</th>
+          <td>종각/종로3가창신동/대학로/경복궁역</td>
+          </tr>
+          <tr>
+          <th>중구</th>
+          <td>을지로4가역/신당역/약수역 사거리</td>
+          <th>중랑구</th>
+          <td>신내동/동부시장</td>
+          </tr>
+          <tr>
+          <th>금천구</th>
+          <td>가산디지털단지</td>
+          <th></th>
+          <td></td>
+          </tr>
+          </tbody>
+          </table>
+
+          <!-- 영남지역 -->
+          <table class="youngnam">
+          <caption>영남지역</caption>
+          <tbody>
+          <tr>
+          <th>부산</th>
+          <td>센텀시티역 벡스코/부산시청앞/연산동/명지국제신도시</td>         
+          <th>울산</th>
+          <td>화봉동</td>
+          </tr>
+          <tr>
+          <th>대구</th>
+          <td>지산동(지산역 사거리)/침산동/화원삼거리</td>
+          <th>경북</th>
+          <td>구미 옥계동/ 영주/ 상주/ 문경</td>
+          </tr>
+          <tr>
+          <th>경남</th>
+          <td>진주 평거동</td>
+          <th></th>
+          <td></td>
+          </tr>
+          </tbody>
+          </table>
+
+          <table class="gyeonggi">
+          <caption>경기지역</caption>
+          <tr>
+          <th>광명</th>
+          <td>광명 KTX역/철산역/소하동</td>
+          <th>부천</th>
+          <td>원종동/소사본동</td>
+          </tr>
+          <tr>
+          <th>성남</th>
+          <td>모란역/미금역/정자역/오리역</td>
+          <th>수원</th>
+          <td>화서지구(정자동)</td>
+          </tr>
+          <tr>
+          <th>시흥</th>
+          <td>장현지구/은계지구/목감지구</td>  
+          <th>안산</th>
+          <td>선부동/고잔동</td>
+          </tr>
+          <tr>
+          <th>안양</th>
+          <td>범계역/인덕원</td>
+          <th>용인</th>
+          <td>성복동/상현동/보정동/구성마북지구/기흥구청/동백지구/역북지구</td>
+          </tr>
+          <tr>
+          <th>의정부</th>
+          <td>회룡</td>
+          <th>인천</th>
+          <td>송도신도시/동춘동/신현동/석남동/소래포구역/서구청/서창지구/영종도/제물포</td>
+          </tr>
+          <tr>
+          <th>파주</th>
+          <td>금촌동/금릉역/운정지구/문산읍</td>
+          <th>고양</th>
+          <td>탄현역(중산동)/마두역/풍동지구/삼송지구</td>
+          </tr>
+          <tr>
+          <th>김포</th>
+          <td>풍무지구/걸포지구</td>
+          <th>남양주</th>
+          <td>별내신도시/도농역</td>
+          </tr>
+          <tr>
+          <th>동두천</th>
+          <td>지행역상업지</td>
+          <th>양주</th>
+          <td>회천지구/옥정지구</td>
+          </tr>
+          <tr>
+          <th>양평</th>
+          <td>시장~터미널</td>
+          <th>의왕</th>
+          <td>오전동(의왕 이마트 앞)</td>
+          </tr>
+          <tr>
+          <th>화성</th>
+          <td>화성시청신도시</td>
+          <th>안성</th>
+          <td>공도</td>
+          </tr>
+          <tr>
+          <th>평택</th>
+          <td>고덕지구/지제역</td>
+          <th>과천</th>
+          <td>과천시청역세권</td>
+          </tr>
+          </table>
+
+          <!-- 그외지역 -->
+          <table class="other">
+          <caption>그외지역</caption>
+          <tr>
+          <th>강원</th>
+          <td>홍천/태백</td>
+          <th>대전</th>
+          <td>월평동</td>
+          </tr>
+          <tr>
+          <th>충북</th>
+          <td>충주/청주(복대동)</td>
+          <th>충남</th>
+          <td>배방읍 아산역</td>
+          </tr>
+          <tr>
+          <th>광주</th>
+          <td>금호지구/진월동/ 봉선동/ 일곡지구</td>
+          <th>전남</th>
+          <td>광양/여수 웅천동/목포 남악신도시</td>
+          </tr>
+          <tr>
+          <th>전북</th>
+          <td>조촌동사거리</td>
+          <th>제주</th>
+          <td></td>
+          </tr>
+          </table>
+        </div>
+      </section>
+      <!-- 문의 -->
+      <div class="btn_wrap">
+        <a href="#" class="request">가맹점 개설문의</a>
+      </div>
+  </div>
+    <!-- //content_inner -->
+</div>
+<!-- //content -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<div id="footer scroll-section">
+
+</div>
+<!-- //footer -->
+</div>
+<!-- //wrap -->
+<script>
+async function fetchHtmlAsText(url){
+  const response = await fetch(url);
+  return await response.text();
+}
+async function importPage(target) {
+  document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+}
+importPage('header');
+importPage('footer');
+</script>
+</body>
+</html>
